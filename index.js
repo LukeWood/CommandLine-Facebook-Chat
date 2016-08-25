@@ -25,23 +25,19 @@ var properties = [
 		api.getUserID(who,function(err,data){
 			if(err) return console.error(err);
 			var listenfor = data[0].userID;
-			console.log("Listening for: "+listenfor);
 			api.listen(function(err, event){
 				if(err) return console.error(err);
 				if(event.type !== "message" || event.threadID !== listenfor)
 					return;
-				console.log(who+": "+ event.body);
+				console.log("\n"+who+": "+ event.body);
 				process.stdout.write("> ");
 			});
 			process.stdout.write("> ");
 			rl.on("line",function(line){
 			api.sendMessage(line,listenfor);
-			console.log("Message sent");
 			process.stdout.write("> ");
 			});
 		});
 		var rl = readline.createInterface({input:process.stdin,output:process.stdout,terminal:false});
-		
 	});
-	
 });
