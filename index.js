@@ -14,10 +14,13 @@ var properties = [
   ];
   prompt.start();
   prompt.get(properties, function (err, result) {
+
     if (err) { return console.error(err); }
+
 	var user = result.username;
-    	var password = result.password;	
+	var password = result.password;	
 	var who = result.who;
+
     login({email:user,password:password},function(err,api)
 	{
 		if(err) return console.error(err);
