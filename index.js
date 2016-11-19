@@ -9,7 +9,7 @@ var properties = [
       hidden: true
     },
 	{
-		name:'who'
+		name:'who_to_chat'
 	}
   ];
   prompt.start();
@@ -19,7 +19,7 @@ var properties = [
 
 	var user = result.username;
 	var password = result.password;	
-	var who = result.who;
+	var who = result.who_to_chat;
 
     login({email:user,password:password},function(err,api)
 	{
