@@ -24,7 +24,9 @@ var properties = [
     login({email:user,password:password},function(err,api)
 	{
 		if(err) return console.error(err);
+
 		api.setOptions({logLevel:"silent"});
+
 		api.getUserID(who,function(err,data){
 			if(err) return console.error(err);
 			var listenfor = data[0].userID;
