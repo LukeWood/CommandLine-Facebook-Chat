@@ -1,7 +1,18 @@
-# CommandLine-Facebook-Chat
-
-This is a command line standalone Facebook chat client.  I made this as I often like to do a large portion of my work from the terminal/command line and wanted a nice client to chat with friends on.  Enjoy!
-
+# Installation
+To install the program, run:
+```bash
+npm install -g commandlinefbchat
+```
+Then run:
+```bash
+fb-chat-set-user <your_email>
+```
+# Usage
+Then to chat someone, all you have to do is this:
+```bash
+fb-chat <person_to_chat>
+```
+# License
 Copyright (c) 2016 Luke Wood
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
