@@ -27,6 +27,6 @@
   },
   "bin":{
     "fb-chat":"src/index.js",
-    "fb-chat-setup":"src/fbchatconfig.js"
+    "fb-chat-set-user":"src/fbchatconfig.js"
   }
 }
