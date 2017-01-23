@@ -9,7 +9,10 @@ if(process.argv.length == 2){
 	console.log("Please provide a person to chat with");
 	process.exit();
 }
-
+if(!Object.prototype.hasOwnProperty.call(config,"user")){
+	console.log("Please run command: fb-chat-set-user <your_email>");
+	process.exit();
+}
 var user = config.user;
 read({ prompt: 'Password for '+user+": ", silent: true }, function(er, password) {
 	var who = process.argv.slice(2).join(" ");
